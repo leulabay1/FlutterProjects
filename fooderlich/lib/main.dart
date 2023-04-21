@@ -22,7 +22,7 @@ class Fooderlich extends StatelessWidget {
       theme: theme,
       title: 'Fooderlich',
       // 4
-      home: Home(),
+      home: const Home(),
     );
   }
 }
