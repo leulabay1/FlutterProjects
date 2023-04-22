@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/explore_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,7 +13,7 @@ class HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     // TODO: Replace with ExploreScreen
-    Container(color: Colors.white),
+    ExploreScreen(),
     // TODO: Replace with RecipesScreen
     Container(color: Colors.green),
     Container(color: Colors.blue),
@@ -28,11 +29,12 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+          title: Center(
+        child: Text(
           'Fooderlich',
           style: Theme.of(context).textTheme.headline6,
         ),
-      ),
+      )),
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
